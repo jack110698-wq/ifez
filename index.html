@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IFEZ – Global Business Innovation Hub</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#121a2c;
+      --muted:#98a1b3;
+      --text:#e9eefc;
+      --accent:#1b78ff;
+      --accent-2:#cf007f;
+      --ring: rgba(27,120,255,.35);
+      --radius:18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --max: 1180px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:radial-gradient(1200px 600px at 80% -10%, rgba(27,120,255,.15), transparent 60%),
+                              radial-gradient(800px 500px at -10% 10%, rgba(207,0,127,.12), transparent 60%),
+                              var(--bg); color:var(--text); font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Arial, Apple Color Emoji, Noto Color Emoji, Segoe UI Emoji}
+    a{color:var(--text); text-decoration:none}
+    .container{max-width:var(--max); margin-inline:auto; padding:0 20px}
+    .pill{display:inline-flex; gap:.5rem; align-items:center; padding:.45rem .8rem; border:1px solid #2a3550; border-radius:999px; font-weight:600; letter-spacing:.2px; color:#cfd8ff; background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0));}
+    .hero{position:relative; padding:96px 0 72px; overflow:hidden}
+    .hero h1{font-size:clamp(32px, 6vw, 56px); line-height:1.05; margin:18px 0 10px}
+    .hero p{font-size:clamp(16px, 2.4vw, 20px); color:#c8d2ea; max-width:840px}
+    .hero .tags{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+    .cta{margin-top:26px; display:flex; gap:12px; flex-wrap:wrap}
+    .btn{padding:12px 18px; border-radius:12px; font-weight:700; background:var(--accent); color:#fff; border:1px solid rgba(255,255,255,.1); box-shadow:0 8px 16px rgba(27,120,255,.25);}
+    .btn.secondary{background:transparent; border-color:#2a3550}
+    .cards{display:grid; grid-template-columns:repeat(12,1fr); gap:16px}
+    .card{grid-column:span 12; background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border:1px solid #1e2841; border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    @media (min-width:800px){ .card.span-6{grid-column:span 6} .card.span-4{grid-column:span 4} }
+    .section{padding:56px 0}
+    .section h2{font-size:clamp(24px, 4vw, 36px); margin:0 0 10px}
+    .section .lead{color:#c8d2ea; max-width:860px; margin-bottom:20px}
+    .grid-4{display:grid; grid-template-columns:repeat(1,1fr); gap:16px}
+    @media (min-width:900px){ .grid-4{grid-template-columns:repeat(4,1fr)} }
+    .kicker{color:#a5b1d8; text-transform:uppercase; font-weight:800; letter-spacing:.18em; font-size:.8rem}
+    .strategy{display:flex; flex-direction:column; gap:8px; padding:18px; border-radius:14px; border:1px solid #273251; background:linear-gradient(180deg, rgba(27,120,255,.06), rgba(27,120,255,0));}
+    .strategy h3{margin:0; font-size:18px}
+    .strategy p{margin:0; color:#c8d2ea}
+    .fromto{display:grid; grid-template-columns:1fr; gap:16px}
+    @media (min-width:900px){ .fromto{grid-template-columns:1fr 1fr} }
+    .ft-col{padding:18px; border-radius:14px; border:1px dashed #2c3a61}
+    .ft-item{display:flex; align-items:center; gap:12px; padding:12px; border-radius:12px; background:#0d1527; border:1px solid #243055}
+    .ft-item .badge{width:28px; height:28px; display:grid; place-items:center; border-radius:8px; font-weight:800}
+    .ft-left .badge{background:#1b78ff1a; color:#8bb3ff; border:1px solid #2b56a7}
+    .ft-right .badge{background:#cf007f1a; color:#ff83cd; border:1px solid #8b1c66}
+    .hubs{display:grid; grid-template-columns:1fr; gap:16px}
+    @media (min-width:1000px){ .hubs{grid-template-columns:repeat(3,1fr)} }
+    .hub{position:relative; padding:18px; border-radius:16px; border:1px solid #203059; background:linear-gradient(180deg, rgba(207,0,127,.06), rgba(207,0,127,0)); overflow:hidden}
+    .hub h3{margin:2px 0 6px}
+    .hub p{margin:0; color:#c8d2ea}
+    .muted{color:var(--muted)}
+    .divider{height:1px; background:linear-gradient(90deg, transparent, #2a3550, transparent); margin:32px 0}
+    footer{padding:40px 0 80px; border-top:1px solid #202b48; color:#9aa6c7}
+    .strategy:hover, .hub:hover, .card:hover{outline:1px solid var(--ring); box-shadow:0 0 0 6px var(--ring)}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <span class="pill">IFEZ · Incheon Free Economic Zone</span>
+      <h1>2040 IFEZ Vision: <span style="color:var(--accent)">Value Up</span> + <span style="color:var(--accent-2)">Innovation Growth</span></h1>
+      <p>Beyond the Korean Bio Cluster—leaping toward a <strong>Global Business & Bio Innovation Hub</strong>. A world-class environment for investment, research, education, and high-quality living across Songdo, Yeongjong, and Cheongna.</p>
+      <div class="tags">
+        <span class="pill">#GlobalHub</span>
+        <span class="pill">#Bio & Healthcare</span>
+        <span class="pill">#Education Platform</span>
+        <span class="pill">#Smart/Green City</span>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#strategies">Explore Strategies</a>
+        <a class="btn secondary" href="#contact">Contact · G-Tower</a>
+      </div>
+    </div>
+  </header>
+  <section class="section" id="about">
+    <div class="container">
+      <div class="cards">
+        <article class="card span-6">
+          <div class="kicker">About IFEZ</div>
+          <h2>A center of business innovation created by global companies and talents</h2>
+          <p class="lead">A special economic zone attracting foreign investment and building an international business environment centered around Incheon’s <strong>Songdo</strong>, <strong>Yeongjong</strong>, and <strong>Cheongna</strong>.</p>
+        </article>
+        <article class="card span-6">
+          <div class="kicker">Mission</div>
+          <h2>Innovation · Creativity · Social Responsibility</h2>
+          <p class="lead">Advance a sustainable, high-value ecosystem by connecting industry, government, academia and research—while enhancing quality of life and global competitiveness.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="strategies">
+    <div class="container">
+      <div class="kicker">4 Missions & Strategies</div>
+      <h2>Focus areas to accelerate the next decade</h2>
+      <p class="lead">Concise, actionable pillars designed for global audiences and policy stakeholders.</p>
+      <div class="grid-4" style="margin-top:16px">
+        <div class="strategy">
+          <h3>1) Driving Sustainable Growth Momentum</h3>
+          <p>Scale investment, jobs, and export capacity while maintaining fiscal and environmental sustainability.</p>
+        </div>
+        <div class="strategy">
+          <h3>2) Reinventing the Investment Attraction Strategy</h3>
+          <p>From incentives to outcomes: target high-impact sectors (bio, AI, green tech) with partnership-based pipelines.</p>
+        </div>
+        <div class="strategy">
+          <h3>3) Tailored Regional Specialization</h3>
+          <p>Differentiate Songdo · Yeongjong · Cheongna with distinct roles to avoid overlap and maximize synergy.</p>
+        </div>
+        <div class="strategy">
+          <h3>4) Regulatory Innovation for Global Competitiveness</h3>
+          <p>Streamline permits, pilot sandboxes, and align standards with global best practices.</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="kicker">Transformation Map</div>
+      <h2>From foundation to frontier</h2>
+      <div class="fromto" style="margin-top:10px">
+        <div class="ft-col ft-left">
+          <div class="ft-item"><span class="badge">F</span><strong>Leader</strong></div>
+          <div class="ft-item"><span class="badge">F</span><strong>Gateway</strong></div>
+          <div class="ft-item"><span class="badge">F</span><strong>Manufacturing & Trade-based Economy</strong></div>
+        </div>
+        <div class="ft-col ft-right">
+          <div class="ft-item"><span class="badge">T</span><strong>Innovator</strong></div>
+          <div class="ft-item"><span class="badge">T</span><strong>Destination</strong></div>
+          <div class="ft-item"><span class="badge">T</span><strong>Technology & Cultural Industry Economy</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="hubs">
+    <div class="container">
+      <div class="kicker">Thematic Hubs</div>
+      <h2>Platforms powering the Global Hub</h2>
+      <div class="hubs" style="margin-top:12px">
+        <div class="hub">
+          <h3>Bio & Healthcare Hub</h3>
+          <p>World-class biopharma production, the K-Bio Lab Hub, and a full value chain from R&D to scale-up.</p>
+        </div>
+        <div class="hub">
+          <h3>24/7 Global Education Platform</h3>
+          <p>Hybrid (online/offline) programs with universities and industry experts—mentoring, workshops, and forums.</p>
+        </div>
+        <div class="hub">
+          <h3>Smart · Green City</h3>
+          <p>AI-enabled services, sustainable mobility, and resilient infrastructure for live-work-learn environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="kicker">Contact</div>
+      <h2>G-Tower · IFEZ</h2>
+      <div class="cards">
+        <article class="card span-6">
+          <p><strong>Address</strong><br/>G-Tower, 175 Artcenter-daero, Yeonsu-gu, Incheon, 22382, Republic of Korea</p>
+          <p class="muted">Songdo International Business District</p>
+        </article>
+        <article class="card span-6">
+          <p><strong>Links</strong><br/>
+            <a href="#">Official Site</a> · <a href="#">Investment Guide</a> · <a href="#">K-BioX</a>
+          </p>
+          <p class="muted">*Replace links with real URLs as needed.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div>© IFEZ · Incheon Free Economic Zone</div>
+      <div class="muted">This prototype is for presentation and content review.</div>
+    </div>
+  </footer>
+</body>
+</html>
